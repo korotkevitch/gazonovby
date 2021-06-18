@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+{% load static %}
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Gazonov.by - услуги озеленения, благоустройства, ландшафтного дизайна под ключ.</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+    <link rel="stylesheet" href="{% static "css/vendor.css" %}">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+
+    <!-- script
+    ================================================== -->
+    <script src="{% static "js/modernizr.js" %}"></script>
+    <script src="{% static "js/pace.min.js" %}"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/flaticon.css" %}">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="{% url 'index' %}">
+                <img src="{{ head.0.logo.url }}" alt="Gazonov.by">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Закрыть</span></a>
+
+            <div class="header-nav__content">
+                <h3>Меню</h3>
+
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Начало</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">О компании</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="services">Услуги</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Проекты</a></li>
+                    <li><a class="smoothscroll"  href="#clients" title="clients">Отзывы</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Контакты</a></li>
+                </ul>
+
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Меню</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ head.0.image.url }}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h1>
+                    Спасибо, <br>
+                    сообщение отправлено.
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="tel:+375297559750" class="btn btn--stroke">
+                        Позвонить
+                    </a>
+<!--                    <a href="#about" class="smoothscroll btn btn&#45;&#45;stroke">-->
+<!--                        More About Us-->
+<!--                    </a>-->
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Вниз</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+            </li>
+        </ul>
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 style="font-weight:600;" class="subhead subhead--dark">{{ about.0.intro }}</h3>
+                <h1 class="display-1 display-1--light">{{ about.0.title }}</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>
+                {{ about.0.text }}
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+
+            <div class="col-block stats__col ">
+                <div class="stats__count">57</div>
+                <h5 style="font-weight:600;">Сделано проектов</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">7</div>
+                <h5 style="font-weight:600;">В среднем дней на проект</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">29</div>
+                <h5 style="font-weight:600;">Классных рабочих</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">975</div>
+                <h5 style="font-weight:600;">Самый дальний объект (км)</h5>
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 style="font-weight:600;" class="subhead">{{ service.0.intro }}</h3>
+                <h1 class="display-2">{{ service.0.title }}</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row services-list block-1-2 block-tab-full">
+            {% for i in service %}
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="{{ i.icon }}"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">{{ i.service }}</h3>
+                    <p>{{ i.description }}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="intro-wrap">
+
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 style="font-weight:600;" class="subhead">{{ gallery.0.intro }}</h3>
+                    <h1 class="display-2 display-2--light">{{ gallery.0.header }}</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+        </div> <!-- end intro-wrap -->
+
+        <div class="row works-content">
+            <div class="col-full masonry-wrap">
+                <div class="masonry">
+                    {% for i in gallery %}
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="{{ i.image_big.url }}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="{{ i.image_1.url }}"
+                                         srcset="{{ i.image_1.url }} 1x, {{ i.image_2.url }} 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    {{ i.title }}
+                                </h3>
+                                <p class="item-folio__cat">
+                                    {{ i.service }}
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>{{ i.description }}</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+                    {% endfor %}
+
+                </div> <!-- end masonry -->
+            </div> <!-- end col-full -->
+        </div> <!-- end works-content -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" class="s-clients">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 style="font-weight:600;" class="subhead">Наши клиенты</h3>
+                <h1 class="display-2">Отзывы</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+         <div class="row clients-testimonials" data-aos="fade-up">
+            <div class="col-full">
+                <div class="testimonials">
+                    {% for i in testimonials %}
+                    <div class="testimonials__slide">
+
+                        <p>{{ i.testimonial }}</p>
+
+<!--                        <img src="{% static "images/avatars/user-01.jpg" %}" alt="Author image" class="testimonials__avatar">-->
+                        <div class="testimonials__info">
+                            <span style="font-weight:600;font-size:22px;" class="testimonials__name">{{ i.name }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div><!-- end testimonials -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end client-testimonials -->
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 style="font-weight:600;" class="subhead">Контакты</h3>
+                <h1 class="display-2 display-2--light">Форма обратной связи для клиентов и партнеров</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+
+            <div class="contact-primary">
+
+                <h3>Отправьте сообщение</h3>
+
+                <form action="contact_view" method="POST" >
+                    {% csrf_token %}
+                    <fieldset>
+
+                    <div class="form-field">
+                        <input name="name" type="text" placeholder="Ваше имя" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="phone" type="text" placeholder="Телефон" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="message" placeholder="Сообщение" rows="3" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Отправить</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div>
+
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h3 class="h6 hide-on-fullwidth">Контакты</h3>
+
+                    <div class="cinfo">
+                        <h5>Напишите нам:</h5>
+                        <p>
+                            info@gazonov.by<br>
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Позвоните:</h5>
+                        <p>
+                            <a href="tel:+375297559750">Тел.: +375(29)755-97-50</a>
+                        </p>
+                    </div>
+
+                    <ul class="contact-social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        </li>
+                    </ul> <!-- end contact-social -->
+
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    Создание сайта: <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> & <a href="https://colorlib.com" target="_blank">Colorlib</a></h4>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/plugins.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+
+</body>
+
+</html>
